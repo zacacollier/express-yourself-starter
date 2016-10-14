@@ -10,9 +10,11 @@
       <%- subheader %>
       <%- liheader %>
       <% list.forEach((item) => { %>
-        <% if (!item.includes(`ul`)) %>
+        <%- `${list[0]}` %>
+        <% if (!item.includes(`<ul>`)) { %>
         <%- `<li>${item}</li>`  %>
-      <% }); %>
+        <%- `${list[list.length - 1]}` %>
+      <%} }); %>
       <%- header %>
     <!-- </h1> -->
   </body>
