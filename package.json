@@ -4,7 +4,8 @@
   "description": "Lesson 1 Exercise",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/zacacollier/express-yourself-starter/issues"
   },
-  "homepage": "https://github.com/zacacollier/express-yourself-starter#readme"
+  "homepage": "https://github.com/zacacollier/express-yourself-starter#readme",
+  "dependencies": {
+    "babel": "^6.5.2"
+  }
 }

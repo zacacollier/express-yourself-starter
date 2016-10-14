@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Express Yourself</title>
+  </head>
+  <body>
+    <!-- <h1> -->
+      <%- header %>
+      <%- subheader %>
+      <%- liheader %>
+      <% list.forEach((item) => { %>
+        <% if (!item.includes(`ul`)) %>
+        <%- `<li>${item}</li>`  %>
+      <% }); %>
+      <%- header %>
+    <!-- </h1> -->
+  </body>
+</html>
