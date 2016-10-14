@@ -1,0 +1,19 @@
+{
+  "name": "express-yourself-starter",
+  "version": "1.0.0",
+  "description": "Lesson 1 Exercise",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacacollier/express-yourself-starter.git"
+  },
+  "author": "Zac Collier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zacacollier/express-yourself-starter/issues"
+  },
+  "homepage": "https://github.com/zacacollier/express-yourself-starter#readme"
+}
