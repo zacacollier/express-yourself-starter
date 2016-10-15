@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/zacacollier/express-yourself-starter#readme",
   "dependencies": {
-    "babel": "^6.5.2"
+    "babel": "^6.5.2",
+    "gh-avatar": "^2.0.0"
   }
 }

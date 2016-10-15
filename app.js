@@ -4,6 +4,7 @@ const path = require('path');
 
 //npm dependencies
 const ejs = require('ejs');
+const ghAvatar = require('gh-avatar');
 
 //App initialization
 const app = express();
@@ -12,20 +13,26 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+const image = ghAvatar('zacacollier')
+  .then(avatar => console.log(avatar))
+ .catch(reason => console.log(`promise rejected: ${reason}`))
+;
+console.log(image);
+
+
 //Add a route that renders the index view
 app.get('/', (req, res, next) => {
   res.render('index.ejs', { header: '<h1>Header</h1>',
                             subheader: '<h2>Subheader</h2>',
                             liheader: '<h3>List Header</h3>',
-                            list: [
-                              '<ul>',
+                            listItems: [
                               'List Item',
                               'List Item',
                               'List Item',
                               'List Item',
-                              '</ul>'
                             ],
-                            copy: '<p>Lorem ipsum castrati ergo sum</p>'
+                            copy: '<p>Lorem ipsum castrati ergo sum</p>',
+                            avatar: image,
                             });
 })
 

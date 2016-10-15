@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Express Yourself</title>
-  </head>
-  <body>
-    <!-- <h1> -->
-      <%- header %>
-      <%- subheader %>
-      <%- liheader %>
-      <% list.forEach((item) => { %>
-        <%- `${list[0]}` %>
-        <% if (!item.includes(`<ul>`)) { %>
-        <%- `<li>${item}</li>`  %>
-        <%- `${list[list.length - 1]}` %>
-      <%} }); %>
-      <%- header %>
-    <!-- </h1> -->
-  </body>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="container">
+        <!-- <h1> -->
+        <div class="row">
+            <% console.log(avatar) %>
+            <%- header %>
+        </div>
+        <%- subheader %>
+            <%- liheader %>
+                <% listItems.forEach((li) => { %>
+                    <%- `<li>${li}</li>`%>
+                        <% }); %>
+
+                            <!-- </h1> -->
+    </section>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </html>
