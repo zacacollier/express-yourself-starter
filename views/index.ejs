@@ -5,22 +5,39 @@
     <meta charset="utf-8">
     <title>Express Yourself</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
 
 <body>
     <section class="container">
         <!-- <h1> -->
         <div class="row">
-            <% console.log(avatar) %>
+            <div class="col-xs-4">
+                <img src=<%=avatar%> />
+            </div>
             <%- header %>
+                <%- subheader %>
         </div>
-        <%- subheader %>
-            <%- liheader %>
-                <% listItems.forEach((li) => { %>
-                    <%- `<li>${li}</li>`%>
-                        <% }); %>
-
-                            <!-- </h1> -->
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <%- liheader %>
+                    <% listItems.forEach((li) => { %>
+                        <%- `<li>${li}</li>`%>
+                            <% }); %>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <%- learnHeader %>
+                    <% learnItems.forEach((li) => { %>
+                        <%- `<li>${li}</li>`%>
+                            <% }); %>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <%- hobbiesHeader %>
+                    <% hobbiesItems.forEach((li) => { %>
+                        <%- `<li>${li}</li>`%>
+                            <% }); %>
+            </div>
+        </div>
     </section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
