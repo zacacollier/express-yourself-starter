@@ -9,16 +9,20 @@ const ghAvatar = require('gh-avatar');
 //App initialization
 const app = express();
 
-//Set the views directory
+//set a route to CSS as a static asset
 app.use(express.static('css'));
+//Set the views directory
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-const image = ghAvatar('zacacollier')
-  .then(avatar => avatar)
- .catch(reason => console.log(`promise rejected: ${reason}`))
-;
-console.log(image);
+console.log(ghAvatar('zacacollier').then(avatar => {
+  return avatar;
+}));
+// const image = ghAvatar('zacacollier')
+//   .then(avatar => avatar)
+//  .catch(reason => console.log(`promise rejected: ${reason}`))
+// ;
+// console.log(image);
 
 const avatarUrl = 'https://avatars.githubusercontent.com/u/18710669?v=3';
 //Add a route that renders the index view
